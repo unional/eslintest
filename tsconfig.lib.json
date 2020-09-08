@@ -1,0 +1,15 @@
+{
+  "extends": "./.typescript/tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "outDir": "lib",
+    "target": "es2017",
+  },
+  "include": [
+    "typings"
+  ],
+  "files": [
+    "src/index.ts"
+  ]
+}

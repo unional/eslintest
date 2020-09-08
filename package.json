@@ -1,0 +1,69 @@
+{
+  "name": "test-eslint",
+  "version": "0.0.0-development",
+  "description": "test runner for eslint configs, rules, and plugins",
+  "homepage": "https://github.com/unional/test-eslint",
+  "bugs": {
+    "url": "https://github.com/unional/test-eslint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/test-eslint.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Homa Wong",
+    "email": "homawong@gmail.com"
+  },
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "build:watch": "tsc -p tsconfig.lib.json --watch",
+    "clean": "rimraf .nyc_output .ts coverage lib libm",
+    "coverage": "yarn test --coverage",
+    "depcheck": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "eslint --ext=js,ts .",
+    "nuke": "yarn clean && rimraf node_modules",
+    "test": "jest --maxWorkers=60%",
+    "test:watch": "yarn test --watch",
+    "verify": "yarn lint && yarn build && yarn depcheck && yarn coverage",
+    "watch": "yarn test:watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-typescript": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^26.0.13",
+    "codacy-coverage": "^3.4.0",
+    "commitlint-circle": "^1.0.0",
+    "dependency-check": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-harmony": "^4.0.0",
+    "husky": "^4.2.3",
+    "jest": "^24.9.0",
+    "jest-junit": "^11.1.0",
+    "jest-watch-repeat": "^2.0.0",
+    "jest-watch-suspend": "^1.1.2",
+    "jest-watch-toggle-config": "^1.0.2",
+    "jest-watch-typeahead": "^0.4.2",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.0.4",
+    "typescript": "^4.0.2"
+  }
+}
