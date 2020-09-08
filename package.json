@@ -1,5 +1,5 @@
 {
-  "name": "test-eslint",
+  "name": "eslintest",
   "version": "0.0.0-development",
   "description": "test runner for eslint configs, rules, and plugins",
   "homepage": "https://github.com/unional/test-eslint",
