@@ -18,6 +18,9 @@
   "sideEffects": false,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "bin": {
+    "eslintest": "lib/bin.js"
+  },
   "files": [
     "lib",
     "src"
@@ -25,7 +28,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
     "build:watch": "tsc -p tsconfig.lib.json --watch",
-    "clean": "rimraf .nyc_output .ts coverage lib libm",
+    "clean": "rimraf coverage lib",
     "coverage": "yarn test --coverage",
     "depcheck": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "eslint --ext=js,ts .",
@@ -40,7 +43,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "update-notifier": "^4.1.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
@@ -50,6 +55,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^26.0.13",
+    "@types/update-notifier": "^4.1.1",
+    "clibuilder": "^6.4.3",
     "codacy-coverage": "^3.4.0",
     "commitlint-circle": "^1.0.0",
     "dependency-check": "^4.1.0",
