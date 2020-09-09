@@ -1,11 +1,19 @@
 {
-  "extends": "./.typescript/tsconfig.base.json",
   "compilerOptions": {
     "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "inlineSourceMap": true,
+    "lib": ["es2017"],
     "module": "commonjs",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "outDir": "lib",
+    "strict": true,
     "target": "es2017"
   },
-  "include": ["src", "typings"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src", "typings"]
 }
