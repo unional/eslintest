@@ -1,7 +1,16 @@
 {
-  "extends": "./tsconfig.lib.json",
+  "extends": "./.typescript/tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "outDir": "lib",
+    "target": "es2017",
+  },
   "include": [
     "src",
     "typings"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
   ]
 }

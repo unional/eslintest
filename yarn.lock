@@ -2451,10 +2451,10 @@ cli-table@^0.3.1:
   dependencies:
     colors "1.0.3"
 
-clibuilder@^6.4.3:
-  version "6.4.3"
-  resolved "https://registry.yarnpkg.com/clibuilder/-/clibuilder-6.4.3.tgz#308ebe6125dce7c26d07b4f04fa426b40354adbf"
-  integrity sha512-ydEBDG/chnZeKiJFTT7Wip2LJlhouveP22HGPJew8rZQ2WDp/b5luFIl/1pW9KR/m9lnlvD4orkIoC0EEn36nQ==
+clibuilder@^6.4.4:
+  version "6.4.4"
+  resolved "https://registry.yarnpkg.com/clibuilder/-/clibuilder-6.4.4.tgz#f9e31251223297eb2048b4af370c06d797d91468"
+  integrity sha512-dD7BOcep9Ilx05xqJwRrpW4Rga4Gu1Bz8nI+UZNnseWSr2n9G0T65gET9sgdsHOLFvTnwFPtnu5i+mKYXIZElw==
   dependencies:
     "@types/node" "^8"
     camel-case "^4.1.1"
