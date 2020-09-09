@@ -4,13 +4,8 @@
     "declaration": true,
     "module": "commonjs",
     "outDir": "lib",
-    "target": "es2017",
+    "target": "es2017"
   },
-  "include": [
-    "src",
-    "typings"
-  ],
-  "exclude": [
-    "src/**/*.spec.ts"
-  ]
+  "include": ["src", "typings"],
+  "exclude": ["src/**/*.spec.ts"]
 }

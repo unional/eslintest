@@ -5,4 +5,4 @@ import { pkg } from './pkg'
 
 updateNotifier({ pkg }).notify()
 
-cli.parse(process.argv).catch(err => console.error(err))
+cli.parse(process.argv).catch((err) => console.error(err))
